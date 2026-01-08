@@ -11,4 +11,8 @@ public class Mersedes extends Car implements Moovable{
   public void move() {
     System.out.println("Mersedes mooving");
   }
+
+  public void acceleration(){
+    System.out.println("Mersedes acceleration!!! ");
+  }
 }
