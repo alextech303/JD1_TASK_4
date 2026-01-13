@@ -1,8 +1,12 @@
+import config.ConfigLogger;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Objects;
+import java.util.logging.Logger;
 
 public abstract class Car {
+
+
 
   private String name;
   private int number;
@@ -21,9 +25,12 @@ public abstract class Car {
 
   public abstract void move();
 
-  public void stopMove() {
-    System.out.println("STOP_MOVE_CAR");
+  public static void stopMove() {
+  ConfigLogger.LOGGER.info("stopMove");
+
   }
+
+
 
   public String getName() {
     return name;

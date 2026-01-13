@@ -1,3 +1,4 @@
+import config.ConfigLogger;
 import java.time.LocalDateTime;
 
 public class Lada extends Car implements Moovable{
@@ -16,7 +17,7 @@ public class Lada extends Car implements Moovable{
   }
 
   public void stop (){
-    System.out.println("Lada stop");
+    //ConfigLogger.LOGGER.info("stopMove");
   }
 
   public void fly(){

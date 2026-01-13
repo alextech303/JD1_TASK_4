@@ -1,10 +1,14 @@
+import static config.ConfigLogger.LOGGER;
+
+import config.ConfigLogger;
 import java.time.LocalDateTime;
+import java.util.logging.Logger;
 
 public class Main {
 
 
   public static void main(String[] arg) {
-
+    ConfigLogger.configureLogger();
     final int N = 3;
     Car[] carTrack = new Car[N];
     carTrack[0] = new
@@ -31,7 +35,6 @@ public class Main {
 
     carMersedes[0].move();
 
-
     System.out.println("Общие характеристики моделей:");
     for (Mark m : Mark.values()) {
       System.out.println(m + " = " + m.ordinal());
@@ -41,7 +44,7 @@ public class Main {
         Mark.MERCRDES, true);
     mersedes.acceleration();
 
-    Lada[] carLada = new Lada [N];
+    Lada[] carLada = new Lada[N];
 
     carLada[0] = new
         Lada("Granta1", 1111, LocalDateTime.now().withYear(2020), Mark.LADA, true, "green");
@@ -51,10 +54,12 @@ public class Main {
         Lada("Granta3", 333, LocalDateTime.now().withYear(2020), Mark.LADA, true, "red");
     carLada[0].move();
 
-for(Lada lada : carLada){
-  lada.fly();
-}
+    for (Lada lada : carLada) {
+       ConfigLogger.LOGGER.severe("Цикл foreech для Lada");
+      lada.fly();
     }
+    carLada[0].stop();
+  }
 
 
 }
