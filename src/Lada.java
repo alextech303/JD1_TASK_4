@@ -5,9 +5,10 @@ public class Lada extends Car implements Moovable{
 
   private String color;
 
+
   public Lada(String name, int number, LocalDateTime yearOfBuild, Mark mark,
-      boolean state,String color) {
-    super(name, number, yearOfBuild, mark, state);
+      boolean state,double price,String color) {
+    super(name, number, yearOfBuild, mark, state,price);
     this.color=color;
   }
 
@@ -33,6 +34,7 @@ public class Lada extends Car implements Moovable{
     sb.append(", yearOfBuild=" + getYearOfBuild().format(formatter));
     sb.append(", mark=" + getMark());
     sb.append(", state=" + isState());
+    sb.append(", price=" + getPrice());
     sb.append(", color=" +color + '}');
 
     return sb.toString();

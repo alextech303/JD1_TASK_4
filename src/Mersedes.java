@@ -3,8 +3,8 @@ import java.time.LocalDateTime;
 public class Mersedes extends Car implements Moovable{
 
   public Mersedes(String name, int number, LocalDateTime yearOfBuild, Mark mark,
-      boolean state) {
-    super(name, number, yearOfBuild, mark, state);
+      boolean state,double price) {
+    super(name, number, yearOfBuild, mark, state,price);
   }
 
   @Override

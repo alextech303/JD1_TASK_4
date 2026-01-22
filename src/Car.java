@@ -7,7 +7,15 @@ import java.util.logging.Logger;
 public abstract class Car {
 
 
+  public double getPrice() {
+    return price;
+  }
 
+  public void setPrice(double price) {
+    this.price = price;
+  }
+
+  private double price;
   private String name;
   private int number;
   private LocalDateTime yearOfBuild;
@@ -15,12 +23,13 @@ public abstract class Car {
   private boolean state;
   public static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy");
 
-  public Car(String name, int number, LocalDateTime yearOfBuild, Mark mark, boolean state) {
+  public Car(String name, int number, LocalDateTime yearOfBuild, Mark mark, boolean state,double price) {
     this.name = name;
     this.number = number;
     this.yearOfBuild = yearOfBuild;
     this.mark = mark;
     this.state = state;
+    this.price=price;
   }
 
   public abstract void move();
