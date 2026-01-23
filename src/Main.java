@@ -59,7 +59,7 @@ public class Main {
       lada.fly();
     }
     carLada[0].stop();
-    carLada[0].toString();
+    System.out.println(carLada[0]);
   }
 
 

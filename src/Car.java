@@ -58,7 +58,7 @@ public abstract class Car {
   }
 
   public LocalDateTime getYearOfBuild() {
-    return LocalDateTime.parse(yearOfBuild.format(formatter));
+    return yearOfBuild;
   }
 
   public void setYearOfBuild(LocalDateTime yearOfBuild) {
